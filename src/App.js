@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { lightTheme, darkTheme, GlobalStyle } from "./themes.js";
 import styled, { ThemeProvider } from "styled-components";
 import { Cursor } from "./CustomCursor/Cursor";
+import { isMobile } from "react-device-detect";
 
 const StyledApp = styled.div`
   display: flex;
@@ -14,6 +15,10 @@ const StyledApp = styled.div`
   color: ${(props) => props.theme.fontColor};
   font-size: ${(props) => props.theme.fontSize};
   font-family: ${(props) => props.theme.fontFamily};
+
+  @media screen and (max-width: 480px) {
+    font-size: ${(props) => props.theme.mobileFontSize};
+  }
 
   button {
     cursor: none;
@@ -45,14 +50,14 @@ function App() {
 
   return (
     <>
-      <Cursor />
+      {isMobile ? <></> : <Cursor />}
       <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
         <GlobalStyle />
         <StyledApp>
           <i className={theme === "light" ? "ri-sun-fill" : "ri-moon-fill"}></i>
           Do you like light or dark theme?
           <button onClick={() => themeToggler()}>
-            {theme === "light" ? "Light" : "Dark"}
+            {theme === "light" ? "Dark" : "Light"}
           </button>
         </StyledApp>
       </ThemeProvider>
