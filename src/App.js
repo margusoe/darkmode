@@ -8,8 +8,8 @@ const StyledApp = styled.div`
   display: flex;
   margin-top: 15rem;
   font-weight: bold;
+  transition: all 4s;
   align-items: center;
-  transition: all 1.5s;
   flex-direction: column;
   justify-content: center;
   color: ${(props) => props.theme.fontColor};
@@ -29,6 +29,7 @@ const StyledApp = styled.div`
     font-size: 13px;
     margin-top: 10px;
     font-weight: bold;
+    transition: all 2s;
     border-radius: 20px;
     letter-spacing: 0.1px;
     font-family: ${(props) => props.theme.fontFamily};
@@ -37,6 +38,7 @@ const StyledApp = styled.div`
   }
 
   i {
+    transition: all 2s;
     color: ${(props) => props.theme.iconColor};
   }
 `;
