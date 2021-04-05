@@ -1,0 +1,12 @@
+.app-cursor {
+  z-index: 1000;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  border: 1px solid orange;
+  pointer-events: none;
+  overflow: hidden;
+  transform: translate(0, 0, 0);
+  background-color: orange;
+  position: relative;
+}

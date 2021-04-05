@@ -1,24 +1,62 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import { lightTheme, darkTheme, GlobalStyle } from "./themes.js";
+import styled, { ThemeProvider } from "styled-components";
+import { Cursor } from "./CustomCursor/Cursor";
+
+const StyledApp = styled.div`
+  display: flex;
+  margin-top: 15rem;
+  font-weight: bold;
+  align-items: center;
+  transition: all 1.5s;
+  flex-direction: column;
+  justify-content: center;
+  color: ${(props) => props.theme.fontColor};
+  font-size: ${(props) => props.theme.fontSize};
+  font-family: ${(props) => props.theme.fontFamily};
+
+  button {
+    cursor: none;
+    height: 50px;
+    width: 100px;
+    border: none;
+    outline: none;
+    font-size: 13px;
+    margin-top: 10px;
+    font-weight: bold;
+    border-radius: 20px;
+    letter-spacing: 0.1px;
+    font-family: ${(props) => props.theme.fontFamily};
+    background-color: ${(props) => props.theme.backgroundColor};
+    color: ${(props) => props.theme.fontColorButton};
+  }
+
+  i {
+    color: ${(props) => props.theme.iconColor};
+  }
+`;
 
 function App() {
+  const [theme, setTheme] = useState("light");
+
+  const themeToggler = () => {
+    theme === "light" ? setTheme("dark") : setTheme("light");
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Cursor />
+      <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
+        <GlobalStyle />
+        <StyledApp>
+          <i className={theme === "light" ? "ri-sun-fill" : "ri-moon-fill"}></i>
+          Do you like light or dark theme?
+          <button onClick={() => themeToggler()}>
+            {theme === "light" ? "Light" : "Dark"}
+          </button>
+        </StyledApp>
+      </ThemeProvider>
+    </>
   );
 }
 
