@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/darkmode/static/css/main.7c628920.chunk.css",
+    "main.js": "/darkmode/static/js/main.dbf532fc.chunk.js",
+    "main.js.map": "/darkmode/static/js/main.dbf532fc.chunk.js.map",
+    "runtime-main.js": "/darkmode/static/js/runtime-main.cfa0d705.js",
+    "runtime-main.js.map": "/darkmode/static/js/runtime-main.cfa0d705.js.map",
+    "static/js/2.d1f47b15.chunk.js": "/darkmode/static/js/2.d1f47b15.chunk.js",
+    "static/js/2.d1f47b15.chunk.js.map": "/darkmode/static/js/2.d1f47b15.chunk.js.map",
+    "static/js/3.800279cd.chunk.js": "/darkmode/static/js/3.800279cd.chunk.js",
+    "static/js/3.800279cd.chunk.js.map": "/darkmode/static/js/3.800279cd.chunk.js.map",
+    "index.html": "/darkmode/index.html",
+    "static/css/main.7c628920.chunk.css.map": "/darkmode/static/css/main.7c628920.chunk.css.map",
+    "static/js/2.d1f47b15.chunk.js.LICENSE.txt": "/darkmode/static/js/2.d1f47b15.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.cfa0d705.js",
+    "static/js/2.d1f47b15.chunk.js",
+    "static/css/main.7c628920.chunk.css",
+    "static/js/main.dbf532fc.chunk.js"
+  ]
+}
